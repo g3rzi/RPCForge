@@ -44,7 +44,7 @@ class Interface(object):
         self.iid = None
         
     def update_methods_ids(self):
-        for i in xrange(len(self.methods)):
+        for i in range(len(self.methods)):
             self.methods[i].id = i
             
     def connect(self):
@@ -137,7 +137,7 @@ class Interface(object):
                 #   - WinDBG as postmortem debugger => Fuzzer hangs until the service is killed
                 #   - No postmortem debugger => Service is restarted and message is lost
                 if 'STATUS_MESSAGE_LOST' in str(e):
-                    raw_input('[!] Stopped: CRASH in {} {}'.format(self.uuid, method.name))
+                    input('[!] Stopped: CRASH in {} {}'.format(self.uuid, method.name))
                     exit(0)
                 else:
                     log("Exception during the call - " + str(e)[:30])
