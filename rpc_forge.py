@@ -323,14 +323,14 @@ class Fuzzer(object):
         count = 0
         for interface in self.interfaces:
             try:
-                print "[?] Try to connect to", interface.uuid
+                print("[?] Try to connect to", interface.uuid)
                 interface.connect()
-                print "[+] Connected to", interface.uuid
+                print("[+] Connected to", interface.uuid)
                 count += 1
             except Exception as e:
-                print "[-] FAIL to connect : " + str(e)
+                print("[-] FAIL to connect : " + str(e))
 
-        print "[!] Successfully connected to {} / {}".format(count, len(self.interfaces))
+        print("[!] Successfully connected to {} / {}".format(count, len(self.interfaces)))
     
     def fuzz_one_random_interface(self, iterations):
         """Select and fuzz one random interface (iterations RPC calls)"""
