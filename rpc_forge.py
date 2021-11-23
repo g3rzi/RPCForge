@@ -96,7 +96,7 @@ class Interface(object):
          return client.call(iid, method, arguments)
 
     def find_method_by_name(self, s):
-        for i in xrange(len(self.methods)):
+        for i in range(len(self.methods)):
             if s.lower() == self.methods[i].name.lower():
                 return i
         return None
@@ -109,7 +109,7 @@ class Interface(object):
         except:
             return
         
-        for _ in xrange(iterations):
+        for _ in range(iterations):
             # Send data to a random method
             method_number = random.randint(0, len(self.methods) - 1)
             method = self.methods[method_number]
