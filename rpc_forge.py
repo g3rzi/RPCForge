@@ -26,9 +26,9 @@ def log(s, no_new_line = False, debug = False):
         fsync(LOGFILE.fileno())
     if DEBUG_STDOUT:
         if no_new_line:
-            print s,
+            print(s),
         else:
-            print s
+            print(s)
 
 # RPC classes
 
