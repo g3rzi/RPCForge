@@ -22,10 +22,10 @@ class IntGenerator(object):
         self.add_integer_boundaries(self.max_num / 32)
         self.add_integer_boundaries(self.max_num)
         # Add some randoms
-        for _ in xrange(50):
+        for _ in range(50):
             self.choices.append(random.randint(0, self.max_num))
     def add_integer_boundaries (self, integer):
-        for i in xrange(-10, 10):
+        for i in range(-10, 10):
             case = integer + i
             if 0 <= case < self.max_num:
                 if case not in self.choices:
