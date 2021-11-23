@@ -122,7 +122,7 @@ class NdrLongConformantArray(NdrType, ndr.NdrConformantArray):
     @classmethod
     def generate(cls, ctx, range_min, range_max):
         params = []
-        for _ in xrange(random.randint(0, 0xff)):
+        for _ in range(random.randint(0, 0xff)):
             params.append(random.choice(long_generator.choices))
         return len(params), params
 
